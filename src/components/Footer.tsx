@@ -27,7 +27,7 @@ export const Footer = () => {
               <div className="w-12 h-12 bg-gradient-accent rounded-xl flex items-center justify-center">
                 <TrendingUp className="w-7 h-7 text-white" />
               </div>
-              <span className="text-2xl font-bold">Trading Hub</span>
+              <span className="text-2xl font-bold">Alkaleel Trading Hub Academy</span>
             </div>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed max-w-md">
               Transforming traders worldwide with proven Smart Money Concepts and institutional-grade mentorship. 
@@ -90,7 +90,7 @@ export const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-primary-foreground/60 text-sm">
-              © {currentYear} Trading Hub. All rights reserved. Professional trading involves risk.
+              © {currentYear} Alkaleel Trading Hub Academy. All rights reserved. Professional trading involves risk.
             </div>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-primary-foreground/60 hover:text-accent transition-colors">
