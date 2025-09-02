@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Fintech Design System 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 0 0% 99%;
+    --foreground: 218 19% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 218 19% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 218 19% 20%;
+
+    /* Professional Navy Primary */
+    --primary: 218 70% 15%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Warm Neutral Secondary */
+    --secondary: 217 12% 92%;
+    --secondary-foreground: 218 19% 20%;
+
+    --muted: 217 12% 96%;
+    --muted-foreground: 218 11% 45%;
+
+    /* Electric Blue Accent */
+    --accent: 206 100% 55%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Success Green */
+    --success: 142 73% 42%;
+    --success-foreground: 0 0% 98%;
+
+    /* Warning Orange */
+    --warning: 38 92% 55%;
+    --warning-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 12% 90%;
+    --input: 217 12% 90%;
+    --ring: 206 100% 55%;
+
+    --radius: 0.75rem;
+
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(218 70% 15%), hsl(218 70% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(206 100% 55%), hsl(206 100% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142 73% 42%), hsl(142 73% 52%));
+    --gradient-hero: linear-gradient(135deg, hsl(218 70% 15%) 0%, hsl(218 70% 25%) 50%, hsl(206 100% 55%) 100%);
+    
+    /* Professional Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(218 19% 20% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(218 19% 20% / 0.1), 0 1px 2px -1px hsl(218 19% 20% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(218 19% 20% / 0.1), 0 2px 4px -2px hsl(218 19% 20% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(218 19% 20% / 0.1), 0 4px 6px -4px hsl(218 19% 20% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(218 19% 20% / 0.1), 0 8px 10px -6px hsl(218 19% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(206 100% 55% / 0.15);
+
+    /* Professional Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 218 19% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 218 19% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 218 19% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Bright Primary for Dark Mode */
+    --primary: 206 100% 55%;
+    --primary-foreground: 218 19% 8%;
+
+    --secondary: 218 19% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 218 19% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 206 100% 55%;
+    --accent-foreground: 218 19% 8%;
+
+    --success: 142 73% 52%;
+    --success-foreground: 218 19% 8%;
+
+    --warning: 38 92% 65%;
+    --warning-foreground: 218 19% 8%;
+
+    --destructive: 0 84% 70%;
+    --destructive-foreground: 218 19% 8%;
+
+    --border: 218 19% 20%;
+    --input: 218 19% 20%;
+    --ring: 206 100% 55%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(206 100% 55%), hsl(206 100% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(206 100% 55%), hsl(142 73% 52%));
+    --gradient-success: linear-gradient(135deg, hsl(142 73% 52%), hsl(142 73% 62%));
+    --gradient-hero: linear-gradient(135deg, hsl(218 19% 8%) 0%, hsl(218 19% 15%) 50%, hsl(206 100% 55%) 100%);
+    
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.25);
+    --shadow: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px -1px hsl(0 0% 0% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -4px hsl(0 0% 0% / 0.3);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.3), 0 8px 10px -6px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(206 100% 55% / 0.3);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Professional Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-success bg-clip-text text-transparent;
+  }
+
+  /* Enhanced Scroll Animations */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .animate-fade-in-up {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+  
+  .animate-fade-in-up.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .animate-fade-in {
+    @apply opacity-0 transition-opacity duration-700 ease-out;
+  }
+  
+  .animate-fade-in.in-view {
+    @apply opacity-100;
+  }
+
+  .animate-scale-in {
+    @apply scale-95 opacity-0 transition-all duration-500 ease-out;
+  }
+  
+  .animate-scale-in.in-view {
+    @apply scale-100 opacity-100;
+  }
+
+  .animate-slide-in-left {
+    @apply opacity-0 -translate-x-8 transition-all duration-700 ease-out;
+  }
+  
+  .animate-slide-in-left.in-view {
+    @apply opacity-100 translate-x-0;
+  }
+
+  .animate-slide-in-right {
+    @apply opacity-0 translate-x-8 transition-all duration-700 ease-out;
+  }
+  
+  .animate-slide-in-right.in-view {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* Professional Card Styles */
+  .card-professional {
+    @apply bg-card border border-border rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl;
+  }
+
+  /* Button Styles */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-accent to-success text-white font-semibold;
+  }
+
+  .btn-whatsapp {
+    @apply bg-success hover:bg-success/90 text-white font-semibold shadow-lg hover:shadow-xl;
+  }
+
+  /* Professional Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+}
